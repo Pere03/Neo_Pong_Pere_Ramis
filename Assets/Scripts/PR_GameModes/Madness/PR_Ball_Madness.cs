@@ -22,12 +22,12 @@ public class PR_Ball_Madness : MonoBehaviour
     private void Update()
     {
         
-        if(Game_manager.timeValue <= 100 && Game_manager.timeValue >= 60)
+        if(Game_manager.timeValue <= 80 && Game_manager.timeValue >= 50)
         {
             speed = 20;
         }
 
-        if (Game_manager.timeValue <= 70 && Game_manager.timeValue >= 20)
+        if (Game_manager.timeValue <= 50 && Game_manager.timeValue >= 20)
         {
             speed = 25;
         }
