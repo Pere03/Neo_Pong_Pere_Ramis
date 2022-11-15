@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PR_PlayerController : MonoBehaviour
+public class PR_PlayerController_Quick : MonoBehaviour
 {
     public KeyCode moveUp = KeyCode.W;
     public KeyCode moveDown = KeyCode.S;
