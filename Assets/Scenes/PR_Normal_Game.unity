@@ -311,6 +311,7 @@ MonoBehaviour:
   Text_P1: {fileID: 1580872574}
   Text_P2: {fileID: 1182771899}
   Text_L: {fileID: 488821810}
+  Madness: 0
 --- !u!50 &350792715
 Rigidbody2D:
   serializedVersion: 4
@@ -476,8 +477,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1170,8 +1171,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1409,8 +1410,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1874,6 +1875,7 @@ MonoBehaviour:
   Counter_Player2: {fileID: 1182771901}
   Score_Player1: 0
   Score_Player2: 0
+  MaxScore: 50
   time: {fileID: 909062929}
   timeValue: 120
 --- !u!4 &2020700556

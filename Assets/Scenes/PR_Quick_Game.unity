@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveUp: 119
   moveDown: 115
-  speed: 7.5
+  speed: 10
   boundY: 3.6
 --- !u!61 &134899844
 BoxCollider2D:
@@ -306,11 +306,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f7bd24659d44e4cb0894e3c8a7e9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 20
   Game_manager: {fileID: 2020700555}
   Text_P1: {fileID: 1580872574}
   Text_P2: {fileID: 1182771899}
   Text_L: {fileID: 488821810}
+  Madness: 0
 --- !u!50 &350792715
 Rigidbody2D:
   serializedVersion: 4
@@ -476,8 +477,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -590,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveUp: 273
   moveDown: 274
-  speed: 7.5
+  speed: 10
   boundY: 3.6
 --- !u!61 &569215523
 BoxCollider2D:
@@ -1170,8 +1171,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1466,8 +1467,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 3233e0bab3c5ada4f9f03b9b95147333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1810,8 +1811,9 @@ MonoBehaviour:
   Counter_Player2: {fileID: 1182771901}
   Score_Player1: 0
   Score_Player2: 0
+  MaxScore: 100
   time: {fileID: 909062929}
-  timeValue: 120
+  timeValue: 80
 --- !u!4 &2020700556
 Transform:
   m_ObjectHideFlags: 0

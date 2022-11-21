@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/PR_MainMenu.unity
+    guid: 9cee5d8536d62a541b3d45db74bd0c36
+  - enabled: 1
+    path: Assets/Scenes/PR_Normal_Game.unity
+    guid: bc32cbd96b072f344890908f1bede570
+  - enabled: 1
+    path: Assets/Scenes/PR_Madness_Game.unity
+    guid: e7fc94de8ec283e4196c38923bbfc5ac
+  - enabled: 1
+    path: Assets/Scenes/PR_Quick_Game.unity
+    guid: 7f91044441d2fc6459c1f2e04d55e276
+  - enabled: 1
+    path: Assets/Scenes/PR_Win_Player1.unity
+    guid: c3c6f7b84d727ca4190ff927bfce74f5
+  - enabled: 1
+    path: Assets/Scenes/PR_Win_Player2 1.unity
+    guid: 16e06497cbcfb904585f26c656eacf45
   m_configObjects: {}
