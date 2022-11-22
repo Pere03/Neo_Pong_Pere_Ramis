@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5590639413818478397}
   - component: {fileID: 5590639413818478398}
   m_Layer: 6
-  m_Name: Time
+  m_Name: PR_Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

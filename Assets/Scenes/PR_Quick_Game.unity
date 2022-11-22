@@ -1879,7 +1879,7 @@ MonoBehaviour:
   Counter_Player2: {fileID: 1182771901}
   Score_Player1: 0
   Score_Player2: 0
-  MaxScore: 100
+  MaxScore: 10
   time: {fileID: 1666594112}
   timeValue: 80
   ReturnGame: 0
