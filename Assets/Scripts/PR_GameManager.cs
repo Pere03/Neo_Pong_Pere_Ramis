@@ -16,21 +16,19 @@ public class PR_GameManager : MonoBehaviour
     public TextMeshProUGUI time;
     public float timeValue;
 
-    public TextMeshProUGUI timePause;
-    public float timePauseValue;
-
     public bool ReturnGame;
 
-    public int time_Pause;
+    public GameObject Pause;
     void Start()
     {
-        time_Pause = 5;
+        //Time.timeScale = 0;
         ReturnGame = false;
         Score_Player1 = 0;
         Score_Player2 = 0;
+
+        Pause.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeValue > 0)
@@ -42,48 +40,34 @@ public class PR_GameManager : MonoBehaviour
             timeValue = 0;
         }
 
-        if(ReturnGame == true)
-        {
-            if (timePauseValue > 0)
-            {
-                timePauseValue -= Time.deltaTime;
-            }
-            else
-            {
-                timePauseValue = 0;
-            }
-        }
-
         DisplayTime(timeValue);
-
-        DisplayTime(timePauseValue);
 
 
         if (timeValue == 0 && Score_Player1 > Score_Player2)
         {
-            SceneManager.LoadSceneAsync(5);
+            SceneManager.LoadScene("PR_Win_Player1");
         }
         else
         {
             if (timeValue == 0 && Score_Player1 < Score_Player2)
             {
-                SceneManager.LoadSceneAsync(4);
+                SceneManager.LoadScene("PR_Win_Player2");
             }
         }
 
         if (Score_Player1 >= MaxScore)
         {
-            SceneManager.LoadSceneAsync(5);
+            SceneManager.LoadScene("PR_Win_Player1");
         }
 
         if (Score_Player2 >= MaxScore)
         {
-            SceneManager.LoadSceneAsync(4);
+            SceneManager.LoadScene("PR_Win_Player2");
         }
 
         if (timeValue == 0 && Score_Player1 == Score_Player2)
         {
-            SceneManager.LoadSceneAsync(6);
+            SceneManager.LoadScene(6);
         }
 
         if (Time.timeScale == 1)
@@ -107,20 +91,6 @@ public class PR_GameManager : MonoBehaviour
         time.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    void DisplayTimePause(float timeToDisplay)
-    {
-        if (timeToDisplay < 0)
-        {
-            timeToDisplay = 0;
-        }
-
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        float milliseconds = timeToDisplay % 1 * 1000;
-
-        timePause.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-    }
-
     public void AddPoint_Player1()
     {
         Score_Player1++;
@@ -137,16 +107,19 @@ public class PR_GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = 0;
+        Pause.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void ResumeGame()
     {
-        ReturnGame = true;
-        if(timePauseValue == 0)
-        {
-            Time.timeScale = 1;
-            timePauseValue = time_Pause;
-        }
+        Time.timeScale = 1;
+        Pause.SetActive(false); ;
+    }
+
+    public void BackMenu(int sceneID)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("PR_MainMenu");
     }
 }

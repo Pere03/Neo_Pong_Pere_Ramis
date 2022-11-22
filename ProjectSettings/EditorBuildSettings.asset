@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PR_Win_Player1.unity
     guid: c3c6f7b84d727ca4190ff927bfce74f5
   - enabled: 1
-    path: Assets/Scenes/PR_Win_Player2 1.unity
+    path: Assets/Scenes/PR_Win_Player2.unity
     guid: 16e06497cbcfb904585f26c656eacf45
   m_configObjects: {}

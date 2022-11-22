@@ -32,6 +32,6 @@ public class PR_Win_Lose : MonoBehaviour
 
     public void MainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene("PR_MainMenu");
     }
 }
