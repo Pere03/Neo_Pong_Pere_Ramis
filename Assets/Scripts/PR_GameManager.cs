@@ -19,8 +19,21 @@ public class PR_GameManager : MonoBehaviour
     public bool ReturnGame;
 
     public GameObject Pause;
+
+    public AudioClip PauseS;
+    public AudioClip Resume;
+    public AudioSource aSource;
+
+    public GameObject Music;
+    public AudioSource Mus;
+
+
     void Start()
     {
+        Mus = Music.GetComponent<AudioSource>();
+
+        aSource = GetComponent<AudioSource>();
+
         //Time.timeScale = 0;
         ReturnGame = false;
         Score_Player1 = 0;
@@ -31,6 +44,8 @@ public class PR_GameManager : MonoBehaviour
 
     void Update()
     {
+
+        
         if (timeValue > 0)
         {
             timeValue -= Time.deltaTime;
@@ -107,12 +122,16 @@ public class PR_GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+        Mus.Pause();
+        aSource.PlayOneShot(PauseS);
         Pause.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void ResumeGame()
     {
+        Mus.Play();
+        aSource.PlayOneShot(Resume);
         Time.timeScale = 1;
         Pause.SetActive(false); ;
     }

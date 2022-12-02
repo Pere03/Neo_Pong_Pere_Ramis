@@ -11,8 +11,13 @@ public class PR_Ball : MonoBehaviour
     public GameObject Text_L;
     public bool Madness;
 
+    public AudioClip Ball;
+    public AudioClip Point;
+    public AudioSource aSource;
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
+
         Text_P1.SetActive(false);
         Text_P2.SetActive(false);
         Text_L.SetActive(false);
@@ -55,6 +60,8 @@ public class PR_Ball : MonoBehaviour
     {
         if (col.gameObject.name == "Player1")
         {
+            aSource.PlayOneShot(Ball);
+
             float y = hitFactor(transform.position,
                                 col.transform.position,
                                 col.collider.bounds.size.y);
@@ -66,6 +73,8 @@ public class PR_Ball : MonoBehaviour
 
         if (col.gameObject.name == "Player2")
         {
+            aSource.PlayOneShot(Ball);
+
             float y = hitFactor(transform.position,
                                 col.transform.position,
                                 col.collider.bounds.size.y);
@@ -77,6 +86,8 @@ public class PR_Ball : MonoBehaviour
 
         if(col.gameObject.name == "Wall_Player2")
         {
+            aSource.PlayOneShot(Point);
+
             EnableScore();
             Invoke("AddPlayer1", 0.5f);
             Invoke("DisableScore", 1);
@@ -85,6 +96,8 @@ public class PR_Ball : MonoBehaviour
 
         if (col.gameObject.name == "Wall_Player1")
         {
+            aSource.PlayOneShot(Point);
+
             EnableScore();
             Invoke("AddPlayer2", 0.5f);
             Invoke("DisableScore", 1);
@@ -99,16 +112,6 @@ public class PR_Ball : MonoBehaviour
     public void AddPlayer2()
     {
         Game_manager.AddPoint_Player2();
-    }
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-    }
-
-    public void ResumeGame()
-    {
-        Time.timeScale = 1;
     }
 
     public void EnableScore()

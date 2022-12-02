@@ -17,8 +17,14 @@ public class PR_MenuManager : MonoBehaviour
     public TextMeshProUGUI Wins_p1_text;
     public TextMeshProUGUI Wins_p2_text;
 
+    public AudioClip EffectOk;
+    public AudioClip EffectWClose;
+    public AudioSource aSource;
+
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
+
         LoadUserOptions();
 
         PlayPanel.SetActive(false);
@@ -48,47 +54,43 @@ public class PR_MenuManager : MonoBehaviour
 
     public void PlayOpen()
     {
+        aSource.PlayOneShot(EffectOk);
         PlayPanel.SetActive(true);
     }
 
     public void NormalMode()
     {
+        aSource.PlayOneShot(EffectOk);
         SceneManager.LoadScene("PR_Normal_Game");
-
     }
 
     public void MadnessMode()
     {
+        aSource.PlayOneShot(EffectOk);
         SceneManager.LoadScene("PR_Madness_Game"); 
     }
 
     public void QuickMode()
     {
+        aSource.PlayOneShot(EffectOk);
         SceneManager.LoadScene("PR_Quick_Game"); 
     }
 
     public void PlayClose()
     {
+        aSource.PlayOneShot(EffectWClose);
         PlayPanel.SetActive(false);
-    }
-
-    public void OptionsOpen()
-    {
-        OptionsPanel.SetActive(true);
-    }
-
-    public void OptionsClose()
-    {
-        OptionsPanel.SetActive(false);
     }
 
     public void ResultsOpen()
     {
+        aSource.PlayOneShot(EffectOk);
         ResultsPanel.SetActive(true);
     }
 
     public void ResultsClose()
     {
+        aSource.PlayOneShot(EffectWClose);
         ResultsPanel.SetActive(false);
     }
 
