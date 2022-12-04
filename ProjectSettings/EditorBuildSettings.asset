@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PR_Win_Player2.unity
     guid: 16e06497cbcfb904585f26c656eacf45
+  - enabled: 1
+    path: Assets/Scenes/PR_Tie.unity
+    guid: efff183e96f9dd2409d3a2f41d9dca75
   m_configObjects: {}

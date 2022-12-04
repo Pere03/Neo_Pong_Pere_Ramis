@@ -28,7 +28,6 @@ public class PR_Win_P1 : MonoBehaviour
         Victoria++;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeValue > 0)
@@ -40,7 +39,7 @@ public class PR_Win_P1 : MonoBehaviour
             timeValue = 0;
         }
 
-        if(timeValue == 0)
+        if (timeValue == 0)
         {
             Button.SetActive(true);
         }
@@ -51,6 +50,7 @@ public class PR_Win_P1 : MonoBehaviour
         SceneManager.LoadScene("PR_MainMenu");
     }
 
+    //With this we do, that after having added a victory to player 1, we save this data in our data persistence.
     public void SaveUserOptions()
     {
         PR_DataPersistence.sharedInstance.Wins_P1 += Victoria;

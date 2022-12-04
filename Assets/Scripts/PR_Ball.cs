@@ -26,7 +26,7 @@ public class PR_Ball : MonoBehaviour
     }
     private void Update()
     {
-
+        //This means that if the "madness" condition is active, it will cause the speed of the ball to increase as time progresses.
         if (Madness == true)
         {
             if (Game_manager.timeValue <= 100 && Game_manager.timeValue >= 80)
@@ -58,6 +58,7 @@ public class PR_Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        //Here we make that when the ball collides with a game object with the tag of Player 1 or Player 2 (the 2 rackets), it will bounce and go to the other direction, and depending on which part of the racket hits the ball, it will go up or down.
         if (col.gameObject.name == "Player1")
         {
             aSource.PlayOneShot(Ball);
@@ -84,7 +85,8 @@ public class PR_Ball : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = dir * speed;
         }
 
-        if(col.gameObject.name == "Wall_Player2")
+        //When the ball collides with the wall behind the rackets, it will add a point to the player who scored that point. In addition, it will show the points counter on the screen and you will see how this new point is added.
+        if (col.gameObject.name == "Wall_Player2")
         {
             aSource.PlayOneShot(Point);
 

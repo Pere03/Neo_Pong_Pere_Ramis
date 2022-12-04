@@ -15,9 +15,10 @@ public class PR_PlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //This allows us to move up and down with the rackets for both player 1 and player 2.
+
         var vel = rb2d.velocity;
         if (Input.GetKey(moveUp))
         {

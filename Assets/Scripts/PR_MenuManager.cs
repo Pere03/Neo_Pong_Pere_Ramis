@@ -9,7 +9,6 @@ using TMPro;
 public class PR_MenuManager : MonoBehaviour
 {
     public GameObject PlayPanel;
-    public GameObject OptionsPanel;
     public GameObject ResultsPanel;
 
     public int Wins_Player_1;
@@ -28,7 +27,6 @@ public class PR_MenuManager : MonoBehaviour
         LoadUserOptions();
 
         PlayPanel.SetActive(false);
-        OptionsPanel.SetActive(false);
         ResultsPanel.SetActive(false);
     }
 
@@ -38,6 +36,7 @@ public class PR_MenuManager : MonoBehaviour
         SaveUserOptions();
     }
 
+    //With this we make sure to load the amount of victories of Player 1 and Player 2, and re-save it all the time, so we can have that persistence of data at all times.
     public void SaveUserOptions()
     {
         PR_DataPersistence.sharedInstance.Wins_P1 = Wins_Player_1;
@@ -52,12 +51,7 @@ public class PR_MenuManager : MonoBehaviour
         Wins_p2_text.text = Wins_Player_2.ToString();
     }
 
-    public void PlayOpen()
-    {
-        aSource.PlayOneShot(EffectOk);
-        PlayPanel.SetActive(true);
-    }
-
+    //With this we can load depending on which game mode we want, depending on which button we press.
     public void NormalMode()
     {
         aSource.PlayOneShot(EffectOk);
@@ -74,6 +68,13 @@ public class PR_MenuManager : MonoBehaviour
     {
         aSource.PlayOneShot(EffectOk);
         SceneManager.LoadScene("PR_Quick_Game"); 
+    }
+
+    //With this we make that depending on which button, close or open a menu, and also play a sound.
+    public void PlayOpen()
+    {
+        aSource.PlayOneShot(EffectOk);
+        PlayPanel.SetActive(true);
     }
 
     public void PlayClose()
